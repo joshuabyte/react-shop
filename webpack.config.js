@@ -33,6 +33,13 @@ module.exports = {
         test: /\.(css|scss)$/i,
         use: ["style-loader", "css-loader", "sass-loader"],
       },
+      {
+        test: /\.(png|jpg|svg|jpeg|webp)$/,
+        type: "asset/resource",
+        generator: {
+          filename: "public/assets/logos/[hash][ext]",
+        },
+      },
     ],
   },
   plugins: [
